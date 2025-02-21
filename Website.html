@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toxicity Detection</title>
+</head>
+<body>
+    <h1>Toxicity Detection</h1>
+    <form method="post">
+        <label for="text">Enter Text:</label>
+        <input type="text" id="text" name="text"><br><br>
+        <input type="submit" value="Analyze">
+    </form>
+    {% if prediction %}
+        <h2>Results</h2>
+        <p>Input: {{ user_input }}</p>
+        <p>Toxicity Score: {{ prediction[0] }}</p>
+    {% endif %}
+</body>
+</html>
